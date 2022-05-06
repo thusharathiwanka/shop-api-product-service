@@ -9,11 +9,17 @@ on:
 jobs:
 
   build:
-    name: Build docker container image
+    name: Build docker container image and push to dockerhub
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      uses: docker/build-push-action@v3
+    - name: Publish to dockerhub
+      uses: docker/build-push-action@v3
+      with: 
+        username: ${{ secrets.DOCKER_HUB_USERNAME }}
+        password: ${{ secrets.DOCKER_HUB_PASSWORD }}
+        repository: thusharathiwanka/product-service
