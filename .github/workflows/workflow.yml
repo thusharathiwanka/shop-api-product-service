@@ -47,4 +47,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/product-service
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/shop-api-product-service
