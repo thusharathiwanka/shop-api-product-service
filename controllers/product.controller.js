@@ -105,7 +105,7 @@ const getProduct = async (req, res) => {
 const getProductsTotal = async (req, res) => {
 	try {
 		const Products = await Product.find();
-		return res.status(200).json({ message: "Products total", data: Products.length });
+		return res.status(200).json({ total: Products.length });
 	} catch (err) {
 		console.error(err.message);
 		return res.status(500).send();
