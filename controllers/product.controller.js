@@ -56,7 +56,7 @@ const saveProduct = async (req, res) => {
 const getProducts = async (req, res) => {
 	try {
 		const products = await Product.find();
-		return res.status(200).json({ message: "Products received", data: products });
+		return res.status(200).json({ message: "All products received", data: products });
 	} catch (err) {
 		return res.status(500).json({ message: "Something went wrong" });
 	}
