@@ -1,4 +1,4 @@
-name: Run unit tests, Dockerize product service and Deploy to GKE
+name: Run Unit Tests, Dockerize Product Service and Deploy to GKE
 
 on:
   push:
