@@ -9,8 +9,8 @@ on:
 env:
   PROJECT_ID: ${{ secrets.GKE_PROJECT }}
   GKE_CLUSTER: autopilot-cluster-2
-  GAR_LOCATION: us-central1
-  GKE_ZONE: us-central1
+  GAR_LOCATION: us-east1
+  GKE_ZONE: us-east1
   DEPLOYMENT_NAME: shop-api-product-service
 
 jobs:
