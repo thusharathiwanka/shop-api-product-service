@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shop-api-product-service
+  labels:
+    app: shop-api-product-service
+spec:
+  selector:
+    matchLabels:
+      app: shop-api-product-service
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: shop-api-product-service
+    spec:
+      containers:
+        - name: shop-api-product-service
+          image: thusharathiwanka/shop-api-product-service:latest
+          ports:
+            - containerPort: 5001
