@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: shop-api-product-service
-          image: thusharathiwanka/shop-api-product-service:latest
+          image: thusharathiwanka/shop-api-product-service
           ports:
             - containerPort: 5001
