@@ -24,7 +24,7 @@ const saveProduct = async (req, res) => {
 		}
 
 		try {
-			const response = await axios.get(`http://localhost:5005/${userId}`);
+			const response = await axios.get(`http://35.192.106.101:5000/${userId}`);
 
 			// save product
 			const newProduct = new Product({
