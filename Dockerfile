@@ -20,4 +20,4 @@ ENV PORT 5001
 EXPOSE $PORT
 
 # running the app
-CMD ["npm", "start",]
+CMD ["npm", "start"]
