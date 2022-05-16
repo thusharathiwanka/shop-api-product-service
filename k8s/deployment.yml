@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: shop-api-product-service
-          image: thusharathiwanka/shop-api-product-service
           imagePullPolicy: Always
+          image: thusharathiwanka/shop-api-product-service
           ports:
             - containerPort: 5001
