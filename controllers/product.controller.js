@@ -72,7 +72,12 @@ const getProductsBasedOnStatus = async (req, res) => {
 	if (req.params.status) {
 		try {
 			const products = await Product.find({ status: req.params.status });
-			return res.status(200).json({ message: "Products received", data: products });
+			return res.status(200).json({
+				message: `${
+					req.params.status.charAt(0).toUpperCase() + req.params.status.slice(1)
+				} Products received`,
+				data: products,
+			});
 		} catch (err) {
 			return res.status(500).json({ message: "Something went wrong" });
 		}
